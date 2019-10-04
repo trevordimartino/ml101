@@ -1,0 +1,13 @@
+version: '3'
+services:
+  notebook:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workdir
+    working_dir: /workdir
+    # environment:
+      # SOMETHING: 1
